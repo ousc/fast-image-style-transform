@@ -1,20 +1,21 @@
-## Basic configuration
-style_image: static/img/style/wave.jpg # targeted style image
-naming: "wave" # the name of this model. Determine the path to save checkpoint and events file.
-model_path: models  # root path to save checkpoint and events file. The final path would be <model_path>/<naming>
+## 基础信息
+style_image: static/img/style/wave.jpg # 风格图的地址
+naming: "wave" # 模型的名称
+model_path: models  # 保存到的路径. 最终文件会保存到 <model_path>/<naming>下
 
-## Weight of the loss
-content_weight: 1.0  # weight for content features loss
-style_weight: 220.0  # weight for style features loss
-tv_weight: 0.0  # weight for total variation loss
+## 损失权重
+content_weight: 1.0  # 要转换的图片权重
+style_weight: 220.0  # 风格图权重
+tv_weight: 0.0  # 这里似乎是一个空白的权重，用来迭代优化
+ #loss=α（底图-风格图）+（1-α）（底图-内容图）=α（N-style）+（1-α）（N-content）
 
 ## The size, the iter number to run
 image_size: 256
 batch_size: 4
 epoch: 2
 
-## Loss Network
-loss_model: "vgg_16"
+## 损失网络
+loss_model: "vgg_16" # 模型选用vgg_16
 content_layers:  # use these layers for content loss
   - "vgg_16/conv3/conv3_3"
 style_layers:  # use these layers for style loss
