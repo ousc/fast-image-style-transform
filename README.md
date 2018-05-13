@@ -33,4 +33,4 @@
     tensorboard --logdir models/wave/
 ```
     
-具体参数设置见 "conf/wave(https://github.com/ousc/fast-image-style-transform/conf/wave.yml)".
+具体参数设置见 "conf/wave(https://github.com/ousc/fast-image-style-transform/blob/master/conf/wave.yml)".
