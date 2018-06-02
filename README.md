@@ -10,7 +10,7 @@
 
     pip install tensorflow
 
-    cd fast-image-style-transform/
+    cd fast-image-style-transfy/
 
     python3 web.py
 ```
